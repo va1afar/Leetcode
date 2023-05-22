@@ -7,7 +7,7 @@ class Solution:
         for query in queries:
             dots_in_query = 0
             for point in points:
-                if (query[0] - point[0])**2 + (query[1] - point[1])**2 <= query[2]**2:
+                if sqrt((query[0] - point[0])**2 + (query[1] - point[1])**2) <= query[2]:
                     dots_in_query += 1
             answer.append(dots_in_query)
             
