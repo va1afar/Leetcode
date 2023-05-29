@@ -1,8 +1,8 @@
 class Solution:
     def maxIncreaseKeepingSkyline(self, grid: List[List[int]]) -> int:
         answer = 0
-        colMax = [0 for i in range(len(grid[0]))]
-        rowMax = [0 for i in range(len(grid[0]))]
+        rowMax = [0] * len(grid[0])
+        colMax = [0] * len(grid[0])
         
         # 各行、列の最大値をcolMax, rowMaxに保存します。
         for row in range(len(grid)):
